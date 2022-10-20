@@ -1,4 +1,6 @@
 {% extends "base_generic.html" %}
+{% load thumbnail %}
+{% load static %}
 
 {% block content %}
   <h1>Title: {{ book.title }}</h1>
@@ -7,8 +9,25 @@
   <p><strong>Summary:</strong> {{ book.summary }}</p>
   <p><strong>ISBN:</strong> {{ book.isbn }}</p>
   <p><strong>Language:</strong> {{ book.language }}</p>
+  <p><strong>Image:</strong> {{ book.image }}</p>
+<!--  <p><strong>Image:</strong> <img src="/media/{{book.image}}"></p>-->
+  <p><strong>Фото:</strong> <img class="mr-3" src="{% thumbnail book.image 'default' %}"></p>
   <p><strong>Genre:</strong> {% for genre in book.genre.all %} {{ genre }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
-
+<!--  gg-->
+<!--  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">-->
+<!--    <div class="carousel-inner">-->
+<!--      <div class="carousel-item active">-->
+<!--        <img src="..." class="d-block w-100" alt="...">-->
+<!--      </div>-->
+<!--      <div class="carousel-item">-->
+<!--        <img src="..." class="d-block w-100" alt="...">-->
+<!--      </div>-->
+<!--      <div class="carousel-item">-->
+<!--        <img src="..." class="d-block w-100" alt="...">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--gg-->
   <div style="margin-left:20px;margin-top:20px">
     <h4>Copies</h4>
 

@@ -146,3 +146,7 @@ class AuthorListView(generic.ListView):
 class AuthorDetailView(generic.DetailView):
 
     model = Author
+
+# новое
+# def showsliders(request):
+#     return render(request, 'book_detail.html')

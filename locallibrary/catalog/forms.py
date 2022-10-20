@@ -20,3 +20,4 @@ class RenewBookForm(forms.Form):
 
         # Помните, что всегда надо возвращать "очищенные" данные.
         return data
+
